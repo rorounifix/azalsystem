@@ -69,17 +69,34 @@ th a,td{
 	margin:10px 100px;
 }
 
+table{
+	color:;
+	width:100px;
+	table-layout: fixed;
+	
+	
+}
+
 .table-scroll {
 	position:relative;
+	text-align:center;
 	margin:0 0 0 0;
 	height:600px;
 	overflow-y:auto;
 }
 .table-scroll tbody{
-	width:100%;
-	margin-right:0;
-	max-height:100px;
+	position:absolute;
+	max-height:480px;
 }
+.table-scroll tbody td{
+	width:500px;
+	text-align:center;
+}
+.table-scroll th{
+	
+	text-align:center;
+}
+
 
 
 

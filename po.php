@@ -20,7 +20,7 @@ $result = mysqli_query($conn , $query);
 				<th><a>Sign By</a></th>
 			</tr>
 		</thead>
-		<tbody class="table-responsive" style="position:absolute;height:100px;">
+		<tbody class="table-responsive table" >
 	
 <!--</div>-->
 
