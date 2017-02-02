@@ -15,6 +15,8 @@ $(document).ready(function(){
 
 	});
 	
+	$("#tableLoad").load("po.php");
+	
 	
 	
 	

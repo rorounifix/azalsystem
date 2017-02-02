@@ -27,7 +27,7 @@
 </head>
 
 <body >
-	<div id="main" ">
+	<div id="main">
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -65,54 +65,71 @@
 	  <a class="btn disabled" data-toggle="modal" data-target="#contact">Contact</a>
 	</div>
 	
-	<div class="container-fluid ">
-		<h3>Purchase Order</h2>
-		<!-- Table List -->
-		  <table class="table table-hover ">
-			<thead >
-			  <tr >
-				<th ><a>Order No.</a></th>
-				<th><a>Date Receive</a></th>
-				<th><a>Line Item</a></th>
-				<th><a>Quantity</a></th>
-				<th><a>Location</a></th>
-				<th><a>Required Date</a></th>
-				<th><a>Status</a></th>
-				<th><a>Sign By</a></th>
-			  </tr>
-			</thead>
-			<tbody >
-			  <tr >
-				<td >450456654654</td>
-				<td>jan-20-2017</td>
-				<td>1</td>
-				<td>24</td>
-				<td>Riyadh</td>
-				<td>Jan 28-2017</td>
-				<td>GR</td>
-				<td>AM</td>
-			  </tr>
-			  <tr>
-				<td>450456654654</td>
-				<td>jan-20-2017</td>
-				<td>1</td>
-				<td>24</td>
-				<td>Riyadh</td>
-				<td>Jan 28-2017</td>
-				<td>GR</td>
-				<td>AM</td>
-			  </tr><tr>
-				<td>450456654654</td>
-				<td>jan-20-2017</td>
-				<td>1</td>
-				<td>24</td>
-				<td>Riyadh</td>
-				<td>Jan 28-2017</td>
-				<td>GR</td>
-				<td>AM</td>
-			  </tr>
-			</tbody>
-		  </table>
+	
+<!-- -------------TABLE---------------	 -->
+	<div class="container-fluid" >
+		<div class="row table-scroll">
+			<h3>Purchase Order</h2>
+			<!-- Table List -->
+			<div id="tableLoad" class="" >
+			  <table class="table table-hover " >
+				<thead >
+				  <tr >
+					<th ><a>Order No.</a></th>
+					<th><a>Date Receive</a></th>
+					<th><a>Line Item</a></th>
+					<th><a>Quantity</a></th>
+					<th><a>Location</a></th>
+					<th><a>Required Date</a></th>
+					<th><a>Status</a></th>
+					<th><a>Sign By</a></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr class="success">
+					<td >450456654654</td>
+					<td>jan-20-2017</td>
+					<td>1</td>
+					<td>24</td>
+					<td>Riyadh</td>
+					<td>Jan 28-2017</td>
+					<td>GR</td>
+					<td>AM</td>
+				  </tr>
+				  <tr class="info">
+					<td>450456654654</td>
+					<td>jan-20-2017</td>
+					<td>1</td>
+					<td>24</td>
+					<td>Riyadh</td>
+					<td>Jan 28-2017</td>
+					<td>GR</td>
+					<td>AM</td>
+				  </tr>
+				  <tr class="warning">
+					<td>450456654654</td>
+					<td>jan-20-2017</td>
+					<td>1</td>
+					<td>24</td>
+					<td>Riyadh</td>
+					<td>Jan 28-2017</td>
+					<td>GR</td>
+					<td>AM</td>
+				  </tr>
+				  <tr class="danger">
+					<td>450456654654</td>
+					<td>jan-20-2017</td>
+					<td>1</td>
+					<td>24</td>
+					<td>Riyadh</td>
+					<td>Jan 28-2017</td>
+					<td>GR</td>
+					<td>AM</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		</div>
 	</div>
 	
 	<!-- New PO -->
