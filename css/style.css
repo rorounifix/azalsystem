@@ -28,7 +28,7 @@ th a,td{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color:rgba(0,0,0,.8);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -97,8 +97,25 @@ table{
 	text-align:center;
 }
 
+/* STATUS UPDATE */
+.gr{
+	background:rgba(197,255,193,.5);
+}
+.process{
+	background:rgba(253,255,168,.5);
+}
+.reminder{
+	background:rgba(255,211,130,.5);
+}
+.cancel{
+	background:rgba(255,121,121,.5);
+}
 
-
+.all-disable{
+	background:rgba(0,0,0,0.4);
+	-webkit-transition:all .8s;
+	transition:all .8s;
+}
 
 
 

@@ -4,10 +4,39 @@ include("conn.php");
 $query = "SELECT * FROM `purchase order` ORDER BY `id` DESC LIMIT 20";
 $result = mysqli_query($conn , $query);
 
+
+function status($id,$status){
+			global $id;
+				if($status == "GR DONE"){
+					echo "<script>
+						$('tbody tr#$id').addClass('gr');
+					</script>";
+				}elseif($status == "ON PROCESS"){
+					echo "<script>
+						$('tbody tr#$id').addClass('process');
+					</script>";
+				}elseif($status == "REMINDER"){
+					echo "<script>
+						$('tbody tr#$id').addClass('reminder');
+					</script>";
+				}elseif($status == "OVERDUE"){
+					echo "<script>
+						$('tbody tr#$id').addClass('reminder');
+					</script>";
+				}elseif($status == "JOB NOT DONE"){
+					echo "<script>
+						$('tbody tr#$id').addClass('gr');
+					</script>";
+				}elseif($status == "CANCELLED"){
+					echo "<script>
+						$('tbody tr#$id').addClass('cancel');
+					</script>";
+				}
+			}
 ?>
 <!--<link rel="stylesheet" style="css/text" href="style.css">-->
 <!--<div id="header">-->
-	<table class="table table-hover" >
+	<table class="table"  >
 		<thead >
 			<tr>
 				<th ><a>Order No.</a></th>
@@ -40,8 +69,8 @@ $result = mysqli_query($conn , $query);
 				$sign = $row["Sign By"];
 				
 				echo "	";
-				echo "		<tr>";
-				echo "		<td>" . $po . "</td>  ";
+				echo "	<tr class='' style='cursor:grab' id=".$id.">";
+				echo "		<td >" . $po . "</td>  ";
 				echo "		<td>" . $poDateReceive . "</td>";
 				echo "		<td>" . $lineItem . "</td>";
 				echo "		<td>" . $quantity . "</td>";
@@ -49,9 +78,14 @@ $result = mysqli_query($conn , $query);
 				echo "		<td>". $etaDate ."</td>";
 				echo "		<td>" .  $status  . "</td>";
 				echo "		<td>" . $sign . "</td>";
-				echo "		</tr>";
+				echo "	</tr>";
 				
-					
+			
+			
+			status($id,$status);	
+				
+
+				
 			}	
 		echo "	</tbody>";
 		echo "</table>";		
