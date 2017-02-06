@@ -2,12 +2,20 @@
 include("conn.php");
 
 $po = $_GET['PO'];
-$podate = $_GET['poDate'];
-$lineitem = $_GET['lineItem'];
-$quantity = $_GET['quantity'];
+$qty = $_GET['qty'];
+#$asn = $_POST['asn'];
+#$asndate = $_POST['asndate'];
+#$gccdate = $_POST['gccdate'];
+$lineitem = $_GET['li'];
+$eta = $_GET['eta'];
+#$eta = $_POST['etadate'];
+$podate = $_GET['podate'];
+#$username = $_POST['username'];
+#$contact = $_POST['contact'];
 $location = $_GET['location'];
-$etaDate = $_GET['eta'];
-$signBy = $_GET['signBy'];
+$buy = $_GET['buyer'];
+$sign = $_GET['sign'];
+echo $eta;
 
 if(strlen($po) != 10 ){
 	echo '<script>alert("Put the correct Order!!!")</script>';

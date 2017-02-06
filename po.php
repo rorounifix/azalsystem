@@ -36,7 +36,7 @@ function status($id,$status){
 ?>
 <!--<link rel="stylesheet" style="css/text" href="style.css">-->
 <!--<div id="header">-->
-	<table class="table"  >
+	<table class="table table-hover"  >
 		<thead >
 			<tr>
 				<th ><a>Order No.</a></th>
@@ -89,7 +89,9 @@ function status($id,$status){
 			}	
 		echo "	</tbody>";
 		echo "</table>";		
-				
+		
+		$conn->close();
+		
 		?>
 	
 		
