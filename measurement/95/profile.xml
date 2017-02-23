@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+			<reference>95</reference>
+			<name>Husain</name>
+			<contact>123-123</contact>
+			<contact2/>
+			<fax>dd</fax>
+			<email></email>
+			<house>House 123</house>
+			<address>block 8 lot 28 </address>
+			<remarks>test</remarks>
+		<contact_1></contact_1><contact_2></contact_2></profile>

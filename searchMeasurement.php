@@ -1,13 +1,15 @@
 <?php
-
 include("conn.php");
+
+$search = $_GET['search'];
 	
-$query = "SELECT * FROM `measurement` ORDER BY `id` DESC LIMIT 20";
+$query = "SELECT * FROM `measurement` WHERE `name` LIKE '%$search%' ORDER BY `id` DESC";
 $result = mysqli_query($conn , $query);
 
 ?>
-
-		<table class="table table-hover"  >
+<!--<link rel="stylesheet" style="css/text" href="style.css">-->
+<!--<div id="header">-->
+	<table class="table table-hover"  >
 		<thead >
 			<tr>
 				<th ><a>Reference No.</a></th>
@@ -20,10 +22,13 @@ $result = mysqli_query($conn , $query);
 		</thead>
 		<tbody class="table table-responsive" >
 	
+<!--</div>-->
+
+<!--<div id="result">-->
 
 		<?php
 					
-			while($row = mysqli_fetch_array($result)){
+		while($row = mysqli_fetch_array($result)){
 				$reference = $row["id"];
 				$name = $row["name"];
 				$contact = $row["contacts"];
@@ -53,3 +58,5 @@ $result = mysqli_query($conn , $query);
 			$conn->close();
 
 		?>
+	
+		

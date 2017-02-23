@@ -2,23 +2,25 @@
 include('conn.php');
 include('createFile.php');
 
-$name = $_GET['name'];
-$contacts = $_GET['contact'];
-$house = $_GET['house'];
-$remarks = $_GET['remarks'];
+$name = strtoupper($_GET['name']);
+$contacts = strtoupper($_GET['contact']);
+$house = strtoupper($_GET['house']);
+$remarks = strtoupper($_GET['remarks']);
 
-
-
-	
 	$sql = "INSERT INTO measurement (id, name, contacts, house, remarks)
 		VALUES (NULL, '".$name."', '".$contacts."', '".$house."', '".$remarks."')";
-	
+		
+		
+	// check the name if not exist it will created
 	if ($conn->query($sql) === TRUE) {
-		file_create($name);
-		echo "<script>alert('Add Success')</script>";
+		$reference = $conn->insert_id;
+		file_create($reference); #-----------------------create dir
+		xml_create($reference,$name,$contacts,$house,$remarks);	#create xml file
+		
 		header("refresh:.1;url=/azalpanel");
-	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+	} else{
+		echo "<script>alert('Name Duplicated.. Try to Search First')</script>";
+		header("refresh:.1;url=/azalpanel");
 	}
 
 

@@ -1,6 +1,7 @@
 
 html,
 body {
+   /* background:red; */
   height: 100%;
   margin: 0;
   /* padding: 1em; */
@@ -165,5 +166,33 @@ table{
         width: 260px;
     }   
 
+/* profile area */
+
+.edit{
+	transition:all .3s;
+	cursor:pointer;
+}
+.edit:hover{
+	transition:all .3s;
+	color:#7C7B7B;
+}
+
+.pdf{
+	transition:all .3s;
+	color:#F97373;
+}
+
+.pdf:hover{
+	transition:all .3s;
+	cursor:pointer;
+	opacity:.5;
+}
+
+
+
+a:hover{
+	
+	text-decoration:none;
+}
 
 

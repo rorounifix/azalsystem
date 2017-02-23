@@ -40,21 +40,25 @@
 				</div>
 				
 				<!---------SEARCH BAR---------->
+				<fieldset>
 				<div class="container-fluid pull-left search">
-				  <div class="input-group">
-					<input type="text" class="form-control" placeholder="PO Search" autofocus>
-					<span class="input-group-addon btn btn-default" style="width:10%;">
+				
+				  <div class="input-group ">
+					<input id="searchInput" type="text" class="form-control" placeholder="Search" autofocus>
+					<span id="searchbtn"  class="input-group-addon btn btn-primary searchBtn" style="width:10%;">
 					<i class="fa fa-search"></i></span>
 				  </div>
+				 
 				</div>
 				
+				
 				<ul class="nav navbar-nav pull-right">
-					  <li id="home" class=""><a href="#" >Home</a></li>
-					  <li id="measurement" class="measurement"><a href="#" >Measurement</a></li>
-					  <li id="profile" class=""><a href="#" >profile</a></li>
+					  <li id="" class="disabled"><a href="#Home" >Home</a></li>
+					  <li id="measurement" class="measurement active"><a href="#Measurement" >Measurement</a></li>
+					  <li id="" class="disabled"><a href="#profile" >profile</a></li>
 					  <li class="disabled"><a href="#" >Page 3</a></li>
 				</ul>
-				
+				</fieldset>
 				
 			
 			</div>
@@ -64,8 +68,8 @@
 		<!----------- SIDEBAR -------------->
 	<div id="mySidenav" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn nav-close" >&times;</a>
-	  <a class="btn " data-toggle="modal" data-target="#newPO">New PO</a>
-	  <a class="btn" data-toggle="modal" data-target="#advanceSearch">Advance Search</a>
+	  <a class="btn disabled" data-toggle="modal" data-target="#newPO">New PO</a>
+	  <a class="btn disabled" data-toggle="modal" data-target="#advanceSearch">Advance Search</a>
 	  <a class="btn " data-toggle="modal" data-target="#addMeasurement">Add Measurement</a>
 	  
 	</div>
@@ -73,7 +77,7 @@
 						
 <!-- -------------TABLE---------------	 -->
 	<div class="container-fluid"  >
-		<input type="color">
+		<!-- <input type="color"> -->
 		<div class="row table-scroll">
 			<h3>Purchase Order</h2>
 			<!-- Table List -->
@@ -179,8 +183,8 @@
 					</select>
 				</div>
 				
-				<button type="button" class="btn btn-default disabled">Submit</button>
-				<button type="reset" class="btn btn-default" >Reset</button>
+				<button type="button" class="btn btn-primary disabled">Submit</button>
+				<button type="reset" class="btn btn-danger" >Reset</button>
 				
 			</form>
 		  </div>
@@ -243,8 +247,8 @@
 					</select>
 				</div>
 				
-				<button type="button" class="btn btn-default">Submit</button>
-				<button type="reset" class="btn btn-default" >Reset</button>
+				<button type="button" class="btn btn-primary">Submit</button>
+				<button type="reset" class="btn btn-danger" >Reset</button>
 				
 			</form>
 		  </div>
@@ -283,8 +287,8 @@
 				</div>
 				
 						
-				<button id="sub_Measure" type="button" class="btn btn-default">Submit</button>
-				<button type="reset" class="btn btn-default" >Reset</button>
+				<button id="sub_Measure" type="button" class="btn btn-primary">Submit</button>
+				<button type="reset" class="btn btn-danger" >Reset</button>
 				
 			</form>
 			

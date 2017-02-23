@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+			<reference>90</reference>
+			<name>darw</name>
+			<contact>123-13</contact>
+			<contact2>123144</contact2>
+			<fax>fax 123</fax>
+			<email>test@ymail.com</email>
+			<house>house 234</house>
+			<address>blk 8</address>
+			<remarks>this is another remarks</remarks>
+		<contact1>123</contact1><contact_1>test11</contact_1><contact_2>testsete</contact_2></profile>
